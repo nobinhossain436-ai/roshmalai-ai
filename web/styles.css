@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roshmalai AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <div class="header">
+        <h1>Roshmalai AI</h1>
+        <button id="closePanel">বন্ধ করুন</button>
+      </div>
+      <p>অফলাইন ক্যান্ডেলস্টিক চার্টের উপর শিক্ষামূলক পর্যবেক্ষণ।</p>
+      <input type="file" id="fileInput" accept="image/*" />
+      <img id="preview" alt="preview" />
+      <button id="analyzeBtn">বিশ্লেষণ</button>
+      <div id="result"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

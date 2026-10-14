@@ -1,0 +1,55 @@
+# Roshmalai AI
+
+Roshmalai AI একটি স্থানীয়, অফলাইন, Android-সামঞ্জস্যপূর্ণ ক্যান্ডেলস্টিক চার্ট-চিন্তাধারা শিক্ষা অ্যাপ। এটি সার্ভার, broker, API key, বা paid subscription ছাড়াই চলবে।
+
+## প্রধান বৈশিষ্ট্য
+- Android-ভিত্তিক native app
+- বাংলায় ডিফল্ট UI
+- ছবি আপলোড বা Android screen capture (স্বেচ্ছাময়)
+- ক্যান্ডেলস্টিক চার্টের দৃশ্যমান বৈশিষ্ট্য বিশ্লেষণ
+- Local Room database
+- No analytics, no remote network dependence
+- Bookmarklet companion
+
+## অনুবন্ধী কাঠামো
+- `app/` — Android Kotlin project
+- `web/` — Offline browser prototype
+- `bookmarklet/` — standalone bookmarklet JS
+- `docs/` — algorithm and limitation documents
+
+## Android সেটআপ
+1. Java 17 এবং Android Studio Giraffe+ ইনস্টল করুন
+2. রিপোজিটরি ক্লোন করুন
+3. Android Studio-তে খুলুন
+4. Gradle sync করুন
+5. Run > Emulate / USB device
+
+## APK build
+এই repo-তে APK build করার জন্য Android Studio-র Build > Build Bundle/APK ব্যবহার করুন।
+
+নোট: এই environment-এ APK তৈরি বা test করা হয়নি। তাই "built", "signed", বা "verified" শব্দ ব্যবহার করা যাবে না, যতক্ষণ না আপনি নিজে build ও install করে যাচাই করেন।
+
+## Bookmarklet
+`bookmarklet/roshmalai-bookmarklet.js` ফাইলটি বুকমার্ক হিসেবে সেভ করুন।
+
+- Bookmarklet অন্য Android app-এর screen পড়তে পারবে না।
+- ব্রাউজার যদি access block করে, তাহলে screenshot import feature ব্যবহার করুন।
+
+## Privacy
+- টেক্সট, ছবি, বিশ্লেষণ সব local device-এ রাখা হয়
+- কোনো telemetry বা tracking নেই
+- broker credential, password, account login ইত্যাদি চাওয়া হয় না
+- local data delete button আছে
+
+## Limitations
+- ক্যান্ডেলস্টিক শনাক্তকরণ heuristic-based, সঠিকতা ছবির গুণমানের উপর নির্ভর করে
+- screen capture বা gallery image থেকে খুব কম-মানের chart-এ false positive/negative হতে পারে
+- এই অ্যাপটি পেশাদার কেনেডি বা broker advice দেয় না
+
+## Credits
+- Android project scaffold
+- offline heuristic analysis prototype
+- local storage database prototype
+
+## License
+Apache-2.0
